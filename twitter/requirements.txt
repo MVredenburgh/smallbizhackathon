@@ -1,0 +1,6 @@
+python-twitter
+unicodecsv
+nltk
+geopy
+matplotlib
+
