@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'static_pages/sign_up'
+
+  get 'static_pages/advertising'
+
+  get 'static_pages/marketing'
+
+  get 'static_pages/social_impact'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
