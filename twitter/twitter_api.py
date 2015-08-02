@@ -13,6 +13,12 @@ from geopy.geocoders import Nominatim
 from wand.image import Image
 from tempfile import mkstemp
 import subprocess
+from wordcloud import WordCloud
+import sexmachine.detector as gender
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from collections import Counter
 
 def write_csv(header, rows, filename, header_order=[]):
     print "Writing CSV: "+filename
@@ -59,13 +65,17 @@ GEO_CACHE_FILE = "geo_cache.json"
 GEO_CACHE = {}
 if os.path.exists(GEO_CACHE_FILE):
     GEO_CACHE = jload(GEO_CACHE_FILE)
+for k,v in GEO_CACHE.iteritems():
+    if v and v.get('raw').get('display_name'):
+        v['display'] = v.get('raw').get('display_name')
+
 
 
 def geocode(address):
     if address not in GEO_CACHE:
         try:
-            location = geolocator.geocode(address)
-            GEO_CACHE[address] = {'lat': location.latitude, 'lon':location.longitude, 'raw': location.raw}
+            location = GEOLOCATOR.geocode(address)
+            GEO_CACHE[address] = {'lat': location.latitude, 'lon':location.longitude, 'display':location.raw.get('display_name'), 'raw': location.raw}
             jdump(GEO_CACHE, GEO_CACHE_FILE)
             print "Updated cache with", address
         except:
@@ -73,6 +83,17 @@ def geocode(address):
             jdump(GEO_CACHE, GEO_CACHE_FILE)
             print "Updated cache with", address
     return GEO_CACHE[address]
+
+
+GENDER_CODER = gender.Detector()
+def gender_code(name):
+    gnd = GENDER_CODER.get_gender(name.split()[0].capitalize())
+    if gnd in ['male','mostly_male']:
+        return 'male'
+    elif gnd in ['female','mostly_female']:
+        return 'female'
+    else:
+        return None
 
 
 TWITTER_API_KEY = os.environ['TWITTER_API_KEY']
@@ -164,6 +185,13 @@ def get_profile(screen_name):
     return jload(profile_file)
 
 
+MEDIA_ACCOUNTS = [u.replace('@','').lower().strip() for u in jload('media.list.json')]
+CELEBRITY_ACCOUNTS = [u.replace('@','').lower().strip() for u in jload('celebrities.list.json')]
+CAUSE_ACCOUNTS = [u.replace('@','').lower().strip() for u in jload('causes.list.json')]
+ACTVITY_WORDS = list(set([f.strip().lower() for f in jload('activity.words.json')]))
+
+
+
 def my_followers_also_follow(my_profile_id, all_follower_ids, threshold=0.05):
     users_with_profiles = [uid for uid in all_follower_ids if os.path.exists(_get_profile_file(uid))]
     users_with_also_follows = [uid for uid in all_follower_ids if os.path.exists(_get_also_follows_file(uid))]
@@ -188,8 +216,11 @@ def my_followers_also_follow(my_profile_id, all_follower_ids, threshold=0.05):
     
     header = ['%_of_my_followers_who_follow_them',
               '%_of_their_followers_who_follow_me',
+              'id',
+              'verified',
               'screen_name',
               'name',
+              'gender',
               'total_followers_count',
               'other_accounts_followed_count',
               'follows_me',
@@ -197,10 +228,10 @@ def my_followers_also_follow(my_profile_id, all_follower_ids, threshold=0.05):
               'description',
               'location',
               'url',
-              'IsEvent',
-              'IsMedia',
-              'IsCelebrity',
-              'IsSocialCause',
+              'is_community',
+              'is_celebrity',
+              'is_media',
+              'is_cause',
               ]
     
     def rows():
@@ -211,15 +242,22 @@ def my_followers_also_follow(my_profile_id, all_follower_ids, threshold=0.05):
             
             profile_row = { '%_of_my_followers_who_follow_them': my_followers_pct,
                             '%_of_their_followers_who_follow_me': their_followers_pct,
+                            'id': profile.get('id',''),
+                            'verified': 'Y' if profile.get('verified') else '',
                             'screen_name': profile.get('screen_name',''),
                             'name': profile.get('name',''),
+                            'gender': gender_code(profile.get('name','')) or '',
                             'total_followers_count': profile.get('followers_count',''),
                             'other_accounts_followed_count': profile.get('friends_count',''),
                             'follows_me': "yes" if profile_id in all_follower_ids else "",
                             'followed_by_me': "yes" if profile_id in followed_by_me else "",
                             'description': profile.get('description',''),
                             'location': profile.get('location',''),
-                            'url': profile.get('url', '')
+                            'url': profile.get('url', ''),
+                            'is_community': 'community' in profile.get('description','').lower() and not gender_code(profile.get('name','')),
+                            'is_celebrity': profile.get('screen_name').replace('@','').lower() in CELEBRITY_ACCOUNTS,
+                            'is_media': profile.get('screen_name').replace('@','').lower() in MEDIA_ACCOUNTS,
+                            'is_cause': profile.get('screen_name').replace('@','').lower() in CAUSE_ACCOUNTS,                            
                            }
             yield profile_row
     
@@ -229,14 +267,13 @@ def my_followers_also_follow(my_profile_id, all_follower_ids, threshold=0.05):
     
 def get_profile_keywords(all_follower_ids):
     users_with_profiles = [uid for uid in all_follower_ids if os.path.exists(_get_profile_file(uid))]
-    stop_words = [t.lower() for t in nltk.corpus.stopwords.words('english')]
+    stop_words = [t.lower() for t in nltk.corpus.stopwords.words('english')] + ['http']
     
     descriptions_map = {}
     description_count = 0
     for i, profile_id in enumerate(users_with_profiles):
         profile = jload(_get_profile_file(profile_id))
         description_tokens = [re.sub('[^a-z]+', '', t.lower()) for t in word_tokenize(profile.get('description',''))]
-        description_tokens = [d for d in description_tokens if d not in ['http']]
         description_tokens = [t for t in description_tokens if len(t) > 1 and t not in stop_words]
         description_tuples = [ description_tokens[j]+" "+description_tokens[j+1] for j in range(len(description_tokens)-1)]
         if description_tokens:
@@ -280,7 +317,8 @@ def get_profile_keywords(all_follower_ids):
 def get_followers_info(followed_by_me):
     users_with_profiles = [uid for uid in all_follower_ids if os.path.exists(_get_profile_file(uid))]
     
-    header = ['screen_name',
+    header = ['id',
+              'screen_name',
               'name',
               'total_followers_count',
               'other_accounts_followed_count',
@@ -290,12 +328,16 @@ def get_followers_info(followed_by_me):
               'url',
               'geo_lat',
               'geo_lon',
+              'geo_display',
+              'gender',
+              'interest_list',
               ]
     
     def rows():
         for i, profile_id in enumerate(users_with_profiles):
             profile = jload(_get_profile_file(profile_id))
-            profile_row = { 'screen_name': profile.get('screen_name',''),
+            profile_row = { 'id': profile.get('id',''),
+                            'screen_name': profile.get('screen_name',''),
                             'name': profile.get('name',''),
                             'total_followers_count': profile.get('followers_count',''),
                             'other_accounts_followed_count': profile.get('friends_count',''),
@@ -305,6 +347,9 @@ def get_followers_info(followed_by_me):
                             'url': profile.get('url', ''),
                             'geo_lat': geocode(profile.get('location','')).get('lat') or '',
                             'geo_lon': geocode(profile.get('location','')).get('lon') or '',
+                            'geo_display': geocode(profile.get('location','')).get('display') or '',
+                            'gender': gender_code(profile.get('name','')) or '',
+                            'interest_list': [aw for aw in ACTVITY_WORDS if aw in profile.get('description','').lower()]
                             }
             yield profile_row
     
@@ -355,6 +400,18 @@ def normalize_images(follower_ids, dest_dir):
                         image.save(o)
 
 
+def _get_tmp_data(func, ext='.tmp'):
+    handle, tmp_file = mkstemp(ext)
+    os.close(handle)
+    func(tmp_file)
+    with open(tmp_file, 'rb') as r:
+        file_data = r.read()
+    os.remove(tmp_file)
+    return file_data
+    
+    
+    
+
 def photo_montage(all_follower_ids, width, height):
     photo_files = ['pics_my_followers/'+str(f)+'.jpg' for f in all_follower_ids]
     available_photo_files = [p for p in photo_files if os.path.exists(p)]
@@ -362,17 +419,32 @@ def photo_montage(all_follower_ids, width, height):
         available_photo_files = available_photo_files + available_photo_files
     available_photo_files = available_photo_files[:(width * height)]
     shuffle(available_photo_files)
-    handle, tmp_file = mkstemp('.jpg')
-    os.close(handle)
-    args = ["montage",
-            "-mode", "concatenate",
-            "-tile", str(width)+"x"+str(height),
-            ] + available_photo_files + [tmp_file]
-    subprocess.call(args)
-    with open(tmp_file, 'rb') as r:
-        img_data = r.read()
-    os.remove(tmp_file)
-    return img_data
+    return _get_tmp_data(lambda x: subprocess.call(["montage",
+                                                 "-mode", "concatenate",
+                                                 "-tile", str(width)+"x"+str(height),
+                                                 ] + available_photo_files + [x]))
+
+
+
+def profile_wordcloud(all_follower_ids):
+    users_with_profiles = [uid for uid in all_follower_ids if os.path.exists(_get_profile_file(uid))]
+    stop_words = [t.lower() for t in nltk.corpus.stopwords.words('english')] + ['http']
+    description_words = []
+    
+    for i, profile_id in enumerate(users_with_profiles):
+        profile = jload(_get_profile_file(profile_id))
+        description_tokens = [re.sub('[^a-z]+', '', t.lower()) for t in word_tokenize(profile.get('description',''))]
+        description_tokens = [t for t in description_tokens if len(t) > 1 and t not in stop_words]
+        description_words = description_words + description_tokens
+    text = " ".join(description_words)
+    wordcloud = WordCloud(background_color="white").generate(text)
+    plt.imshow(wordcloud)
+    plt.axis("off")
+    plt_data = _get_tmp_data(lambda x: plt.savefig(x), ext='.png')
+    plt.clf()
+    return description_words, plt_data
+    
+
    
 
 PROFILE_NAME = 'UrbnEarth'
@@ -399,3 +471,76 @@ fol_rows = list(fol_rows)
 
 with open('twitter_'+PROFILE_NAME+'_montage.jpg', 'wb') as w:
     w.write(photo_montage(all_follower_ids, 50, 50))
+
+with open('twitter_'+PROFILE_NAME+'_wordcloud.png', 'wb') as w:
+    w.write(profile_wordcloud(all_follower_ids)[1])
+
+
+
+"""
+Twitter list saver:
+divs = $.find('div.stream-item-header > a > span.username');
+vals = [];
+for(var i=0; i<divs.length; i++) {
+ vals.push(divs[i].innerText.replace('@',''));
+}
+
+http://discoverahobby.com/listofhobbies
+divs = $.find('div.hobbyholder > p');
+vals = [];
+for(var i=0; i<divs.length; i++) {
+ vals.push(divs[i].innerText.replace('@',''));
+ console.log(vals[i]);
+}
+
+"""
+
+faf_communities = [faf for faf in faf_rows if faf.get('is_community')]
+faf_communities.sort(key=lambda x: x.get('%_of_their_followers_who_follow_me',0))
+faf_communities.reverse()
+faf_communities = faf_communities[:5]
+
+faf_celebrities = [faf for faf in faf_rows if faf.get('is_celebrity')]
+faf_celebrities.sort(key=lambda x: x.get('%_of_their_followers_who_follow_me',0))
+faf_celebrities.reverse()
+faf_celebrities = faf_celebrities[:5]
+
+faf_media = [faf for faf in faf_rows if faf.get('is_media')]
+faf_media.sort(key=lambda x: x.get('%_of_their_followers_who_follow_me',0))
+faf_media.reverse()
+faf_media = faf_media[:5]
+
+faf_causes = [faf for faf in faf_rows if faf.get('is_cause')]
+faf_causes.sort(key=lambda x: x.get('%_of_their_followers_who_follow_me',0))
+faf_causes.reverse()
+faf_causes = faf_causes[:5]
+
+
+overall_interest_cluster = Counter()
+male_interest_cluster = Counter()
+female_interest_cluster = Counter()
+geo_cluster = Counter()
+geo_interest_cluster = {}
+
+for fol in fol_rows:
+    overall_interest_cluster.update(fol.get('interest_list') or [])
+    if fol.get('gender') == 'male':
+        male_interest_cluster.update(fol.get('interest_list') or [])
+    elif fol.get('gender') == 'female':
+        female_interest_cluster.update(fol.get('interest_list') or [])
+    if fol.get('geo_display'):
+        if not fol.get('geo_display') in geo_interest_cluster:
+            geo_interest_cluster[fol.get('geo_display')] = Counter()
+        geo_cluster.update([fol.get('geo_display')])
+        geo_interest_cluster[fol.get('geo_display')].update(fol.get('interest_list') or [])
+    
+
+overall_interests = [c[0] for c in overall_interest_cluster.most_common(3)]
+male_interests = [c[0] for c in male_interest_cluster.most_common(3)]
+female_interests = [c[0] for c in female_interest_cluster.most_common(3)]
+
+overall_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in fol_rows if len([m for m in overall_interests if m in fol.get('interest_list')]) > 0])[0]).most_common(5)]
+male_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in fol_rows if len([m for m in male_interests if m in fol.get('interest_list') and fol.get('gender') == 'male']) > 0])[0]).most_common(5)]
+female_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in fol_rows if len([m for m in female_interests if m in fol.get('interest_list') and fol.get('gender') == 'female']) > 0])[0]).most_common(5)]
+
+    

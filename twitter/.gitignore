@@ -6,4 +6,5 @@ profiles_by_name
 *.csv
 *.json
 *.jpg
+*.png
 pics_*
