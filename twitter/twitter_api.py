@@ -31,6 +31,14 @@ def write_csv(header, rows, filename, header_order=[]):
             writer.writerow([unicode(row.get(x,'')) for x in header])
 
 
+def dump(val, filename):
+    jdir = os.path.dirname(filename)
+    if jdir and not os.path.exists(jdir):
+        os.makedirs(jdir)
+    with open(filename, 'wb') as w:
+        w.write(val)
+    
+
 def jdump(jval, filename):
     jdir = os.path.dirname(filename)
     if jdir and not os.path.exists(jdir):
@@ -419,10 +427,11 @@ def photo_montage(all_follower_ids, width, height):
         available_photo_files = available_photo_files + available_photo_files
     available_photo_files = available_photo_files[:(width * height)]
     shuffle(available_photo_files)
-    return _get_tmp_data(lambda x: subprocess.call(["montage",
+    montage_data_jpg = _get_tmp_data(lambda x: subprocess.call(["montage",
                                                  "-mode", "concatenate",
                                                  "-tile", str(width)+"x"+str(height),
                                                  ] + available_photo_files + [x]))
+    return montage_data_jpg
 
 
 
@@ -440,22 +449,88 @@ def profile_wordcloud(all_follower_ids):
     wordcloud = WordCloud(background_color="white").generate(text)
     plt.imshow(wordcloud)
     plt.axis("off")
-    plt_data = _get_tmp_data(lambda x: plt.savefig(x), ext='.png')
+    plt_data_png = _get_tmp_data(lambda x: plt.savefig(x), ext='.png')
     plt.clf()
-    return description_words, plt_data
+    return description_words, plt_data_png
+    
+def gender_piechart(all_follower_ids):
+    users_with_profiles = [uid for uid in all_follower_ids if os.path.exists(_get_profile_file(uid))]
+    genders = [gender_code(jload(_get_profile_file(uid)).get('name','')) for uid in users_with_profiles]
+    male_pct = float(len([g for g in genders if g == 'male'])) / float(len(genders))
+    female_pct = float(len([g for g in genders if g == 'female'])) / float(len(genders))
+    unk_pct = float(len([g for g in genders if not g])) / float(len(genders))
+    plt.pie([female_pct, unk_pct, male_pct],
+            colors=['pink', 'lightgray', 'lightblue'],
+            autopct='%1.1f%%',
+            startangle=90)
+    plt.axis('equal')
+    plt_data_png = _get_tmp_data(lambda x: plt.savefig(x), ext='.png')
+    plt.clf()
+    gender_breakdown = {'M': male_pct, 'F': female_pct, '?': unk_pct}
+    return gender_breakdown, plt_data_png
     
 
-   
+def save_faf_data(my_profile_id, faf_profile_id):
+    my_profile = jload(_get_profile_file(my_profile_id))
+    faf_profile = jload(_get_profile_file(faf_profile_id))
+    my_followers = get_followers(my_profile['screen_name'])
+    users_with_profiles = [uid for uid in my_followers if os.path.exists(_get_profile_file(uid))]
+    users_with_also_follows = [uid for uid in my_followers if os.path.exists(_get_also_follows_file(uid))]
+    sample_users = list(set(users_with_also_follows).intersection(set(users_with_profiles)))
+    common_followers = [u for u in sample_users if faf_profile_id in jload(_get_also_follows_file(u))]
+        
+    my_followers_pct = float(len(common_followers))/float(len(my_followers))
+    their_followers_pct = float(len(common_followers))/float(faf_profile['followers_count']) if faf_profile.get('followers_count','') else float(0)
+    
+    description_words, wordcloud_png = profile_wordcloud(common_followers)
+    word_counts= [[k,v] for k,v in Counter(description_words).iteritems() if v > 1]
+    word_counts.sort(key=lambda x: x[1])
+    word_counts.reverse()
+    word_counts = word_counts[:5]
+    
+    max_width= 10
+    width = max_width if len(common_followers) > max_width else len(common_followers)
+    height = (len(common_followers)/max_width) + 1
+    profile_montage_jpg = photo_montage(common_followers, width, height)
+    
+    gender_breakdown, genderpie_png = gender_piechart(common_followers)
+    
+    info = { 'id': faf_profile['id'],
+             'screen_name': faf_profile['screen_name'],
+             'raw_profile': faf_profile,
+             '%_of_my_followers_who_follow_them': my_followers_pct,
+             '%_of_their_followers_who_follow_me': their_followers_pct,
+             'profile_word_counts': word_counts,
+             'gender_breakdown': gender_breakdown
+             }
+    
+    str_id = str(faf_profile['id'])
+    str_name = faf_profile['screen_name'].replace('@','').lower()
+    jdump(info, 'assets/'+str_id+'.info.json')
+    jdump(info, 'assets/'+str_name+'.info.json')
+    
+    dump(wordcloud_png, 'assets/'+str_id+'.wordcloud.png')
+    dump(wordcloud_png, 'assets/'+str_name+'.wordcloud.png')
+    
+    dump(profile_montage_jpg, 'assets/'+str_id+'.profiles.jpg')
+    dump(profile_montage_jpg, 'assets/'+str_name+'.profiles.jpg')
+             
+    dump(genderpie_png, 'assets/'+str_id+'.gender.png')
+    dump(genderpie_png, 'assets/'+str_name+'.gender.png')
+             
+
+
+
 
 PROFILE_NAME = 'UrbnEarth'
 my_profile_id = get_profile('UrbnEarth')['id']
 
 all_follower_ids = get_followers(PROFILE_NAME)
 
-fetch_profiles([my_profile_id]+all_follower_ids)
-fetch_also_follows([my_profile_id]+all_follower_ids)
-save_profile_photos([my_profile_id]+all_follower_ids)
-normalize_images(all_follower_ids, 'pics_my_followers')
+#fetch_profiles([my_profile_id]+all_follower_ids)
+#fetch_also_follows([my_profile_id]+all_follower_ids)
+#save_profile_photos([my_profile_id]+all_follower_ids)
+#normalize_images(all_follower_ids, 'pics_my_followers')
 
 faf_header, faf_rows = my_followers_also_follow(my_profile_id, all_follower_ids)
 faf_rows = list(faf_rows)
@@ -543,4 +618,30 @@ overall_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in 
 male_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in fol_rows if len([m for m in male_interests if m in fol.get('interest_list') and fol.get('gender') == 'male']) > 0])[0]).most_common(5)]
 female_themes = [c[0] for c in Counter(profile_wordcloud([fol['id'] for fol in fol_rows if len([m for m in female_interests if m in fol.get('interest_list') and fol.get('gender') == 'female']) > 0])[0]).most_common(5)]
 
-    
+overall_geo = [c[0] for c in geo_cluster.most_common(2)]
+
+
+render_profiles = [f['id'] for f in faf_communities] + [f['id'] for f in faf_media] + [f['id'] for f in faf_celebrities] + [f['id'] for f in faf_causes]
+for i, faf_profile_id in enumerate(render_profiles):
+    save_faf_data(my_profile_id, faf_profile_id)
+    print "Rendered profile",i+1,"of",len(render_profiles),"id:",faf_profile_id
+
+master_data = {}
+master_data['advertising'] = {'communities': [str(f['id']) for f in faf_communities],
+                              'media': [str(f['id']) for f in faf_media],
+                              'celebrities': [str(f['id']) for f in faf_celebrities],
+                              }
+master_data['marketing'] = {'everyone': {'interests': overall_interests, 'themes': overall_themes},
+                            'male': {'interests': male_interests, 'themes': male_themes},
+                            'female': {'interests': female_interests, 'themes': female_themes},
+                            'geo': overall_geo,
+                            }
+master_data['social_impact'] = {'causes': [str(f['id']) for f in faf_causes],                     }
+master_data['raw_profile'] = jload(_get_profile_file(my_profile_id))
+
+save_faf_data(my_profile_id, my_profile_id)
+str_id = str(my_profile_id)
+str_name = PROFILE_NAME.replace('@','').lower()
+
+jdump(master_data, 'assets/'+str_id+'.master.json')
+jdump(master_data, 'assets/'+str_name+'.master.json')
