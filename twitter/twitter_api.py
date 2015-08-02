@@ -10,6 +10,9 @@ import nltk
 import re
 from nltk.tokenize import word_tokenize
 from geopy.geocoders import Nominatim
+from wand.image import Image
+from tempfile import mkstemp
+import subprocess
 
 def write_csv(header, rows, filename, header_order=[]):
     print "Writing CSV: "+filename
@@ -321,19 +324,56 @@ def save_profile_photos(all_follower_ids):
                 continue
             profile_image_filename = 'images/'+str(profile_id)+'.'+extn
             profile_image_filename = profile_image_filename.lower()
-            try:
-                resp = requests.get(profile_image_url)
-                if resp.status_code == 200:
-                    if not os.path.exists(os.path.dirname(profile_image_filename)):
-                        os.makedirs(os.path.dirname(profile_image_filename))
-                    with open(profile_image_filename, 'wb') as w:
-                        w.write(resp.content)
-                    print "Saved image",i,profile_image_filename
-            except:
-                pass
+            if not os.path.exists(profile_image_filename):
+                try:
+                    resp = requests.get(profile_image_url)
+                    if resp.status_code == 200:
+                        if not os.path.exists(os.path.dirname(profile_image_filename)):
+                            os.makedirs(os.path.dirname(profile_image_filename))
+                        with open(profile_image_filename, 'wb') as w:
+                            w.write(resp.content)
+                        print "Saved image",i,profile_image_filename
+                except:
+                    pass
 
     
-    
+def normalize_images(follower_ids, dest_dir):
+    if not os.path.exists(dest_dir):
+        os.makedirs(dest_dir)
+    for profile_id in follower_ids:
+        for extn in ['jpg', 'png', 'jpeg']:
+            src_file = 'images/'+str(profile_id)+'.'+extn
+            dst_file = dest_dir.rstrip('/')+'/'+str(profile_id)+'.jpg'
+            if os.path.exists(src_file) and not os.path.exists(dst_file):
+                with open(src_file, 'rb') as r:
+                    image = Image(blob=r.read())
+                    image.format = 'jpg'
+                    dim = min(image.width, image.height)
+                    dimstr = str(dim)+'x'+str(dim)
+                    image.transform(dimstr,'48x48')
+                    with open(dst_file,'wb') as o:
+                        image.save(o)
+
+
+def photo_montage(all_follower_ids, width, height):
+    photo_files = ['pics_my_followers/'+str(f)+'.jpg' for f in all_follower_ids]
+    available_photo_files = [p for p in photo_files if os.path.exists(p)]
+    while len(available_photo_files) < (width * height):
+        available_photo_files = available_photo_files + available_photo_files
+    available_photo_files = available_photo_files[:(width * height)]
+    shuffle(available_photo_files)
+    handle, tmp_file = mkstemp('.jpg')
+    os.close(handle)
+    args = ["montage",
+            "-mode", "concatenate",
+            "-tile", str(width)+"x"+str(height),
+            ] + available_photo_files + [tmp_file]
+    subprocess.call(args)
+    with open(tmp_file, 'rb') as r:
+        img_data = r.read()
+    os.remove(tmp_file)
+    return img_data
+   
 
 PROFILE_NAME = 'UrbnEarth'
 my_profile_id = get_profile('UrbnEarth')['id']
@@ -342,14 +382,20 @@ all_follower_ids = get_followers(PROFILE_NAME)
 
 fetch_profiles([my_profile_id]+all_follower_ids)
 fetch_also_follows([my_profile_id]+all_follower_ids)
-
-header, rows = my_followers_also_follow(my_profile_id, all_follower_ids)
-write_csv(header, rows, 'twitter_'+PROFILE_NAME+'_followers_also_follow.csv')
-
-header, rows = get_profile_keywords(all_follower_ids)
-write_csv(header, rows, 'twitter_'+PROFILE_NAME+'_followers_self_describe_as.csv')
-
-header, rows = get_followers_info(all_follower_ids)
-write_csv(header, rows, 'twitter_'+PROFILE_NAME+'_followers.csv')
-
 save_profile_photos([my_profile_id]+all_follower_ids)
+normalize_images(all_follower_ids, 'pics_my_followers')
+
+faf_header, faf_rows = my_followers_also_follow(my_profile_id, all_follower_ids)
+faf_rows = list(faf_rows)
+#write_csv(faf_header, faf_rows, 'twitter_'+PROFILE_NAME+'_followers_also_follow.csv')
+
+fpk_header, fpk_rows = get_profile_keywords(all_follower_ids)
+fpk_rows = list(fpk_rows)
+#write_csv(fpk_header, fpk_rows, 'twitter_'+PROFILE_NAME+'_followers_self_describe_as.csv')
+
+fol_header, fol_rows = get_followers_info(all_follower_ids)
+fol_rows = list(fol_rows)
+#write_csv(fol_header, fol_rows, 'twitter_'+PROFILE_NAME+'_followers.csv')
+
+with open('twitter_'+PROFILE_NAME+'_montage.jpg', 'wb') as w:
+    w.write(photo_montage(all_follower_ids, 50, 50))

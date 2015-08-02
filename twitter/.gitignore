@@ -5,4 +5,5 @@ also_follows
 profiles_by_name
 *.csv
 *.json
-
+*.jpg
+pics_*

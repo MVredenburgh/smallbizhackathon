@@ -3,4 +3,6 @@ unicodecsv
 nltk
 geopy
 matplotlib
+wand
+wordcloud
 
