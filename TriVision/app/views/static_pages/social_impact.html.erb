@@ -1,2 +1,46 @@
-<h1>StaticPages#social_impact</h1>
-<p>Find me in app/views/static_pages/social_impact.html.erb</p>
+<div class="center jumbotron">
+  <div class="row">
+    
+    <h3>Social Impact:</h3>
+    <ul>
+        <li>These non-profits and social-impact groups are important in your network</li>
+        <li>Get involved or donate to these groups</li>
+    </ul>
+    
+    <% @causes.each do |profile| %>
+    <div class="wrap">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-1">
+
+              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>"></img>
+
+              Name: <span><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
+
+              Location: <span><%= profile['raw_profile']['location'] =%></span>
+
+              Description: <span><%= profile['raw_profile']['description'] =%></span>
+
+              Description: <span><%= profile['raw_profile']['description'] =%></span>
+
+              %_of_their_followers_who_follow_me: <span><%= (profile['%_of_their_followers_who_follow_me']*(1000.0)).round / 10.0 =%></span>
+
+              %_of_my_followers_who_follow_them: <span><%= (profile['%_of_my_followers_who_follow_them']*(1000.0)).round / 10.0 =%></span>
+
+              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png"></img>
+
+              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg"></img>
+
+              Gender pic: <img src="/assets/<%= profile['id'] =%>.gender.png"></img>
+          </div>
+        </div>  
+	    <h4>test</h4>
+      </div>  
+    </div>
+    <% end %>
+
+    
+      
+    <!-- <%= @master_json =%> -->
+
+</div>  

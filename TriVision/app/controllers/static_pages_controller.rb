@@ -6,11 +6,8 @@ class StaticPagesController < ApplicationController
 
   def advertising
     data_root = File.expand_path(File.join(File.dirname(__FILE__),'../assets/data'))  
-    # puts "data_root", data_root
     master_file = data_root+"/urbnearth.master.json"
-    # puts "master_file", master_file
     @master_json = JSON.parse(File.read(master_file))
-    #puts "master_json", @master_json
     
     @communities = []
     @master_json['advertising']['communities'].each do |profile_id|
@@ -36,8 +33,23 @@ class StaticPagesController < ApplicationController
   end
 
   def marketing
+    data_root = File.expand_path(File.join(File.dirname(__FILE__),'../assets/data'))  
+    master_file = data_root+"/urbnearth.master.json"
+    @master_json = JSON.parse(File.read(master_file))
+
   end
 
   def social_impact
+    data_root = File.expand_path(File.join(File.dirname(__FILE__),'../assets/data'))  
+    master_file = data_root+"/urbnearth.master.json"
+    @master_json = JSON.parse(File.read(master_file))
+
+    @causes = []
+    @master_json['social_impact']['causes'].each do |profile_id|
+      profile_json = JSON.parse(File.read(data_root+"/"+profile_id+".info.json"))
+      profile_json['id'] = profile_json['id'].to_s
+      @causes.push(profile_json)
+    end
+    
   end
 end
