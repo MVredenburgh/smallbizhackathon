@@ -1,0 +1,79 @@
+{
+  "screen_name": "Botanygeek", 
+  "raw_profile": {
+    "id": 189658688, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "337048", 
+    "profile_text_color": "1F1D1F", 
+    "followers_count": 29280, 
+    "location": "London, UK", 
+    "profile_background_color": "022330", 
+    "listed_count": 535, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "@joshspero Yes. They are a different, but closely related, species from NE Asia. Stickier, sweeter &amp; less watery.", 
+      "created_at": "Sat Aug 01 17:07:17 +0000 2015", 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "joshspero", 
+          "name": "Josh Spero", 
+          "id": 27892256
+        }
+      ], 
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
+      "in_reply_to_status_id": 627523824330907650, 
+      "in_reply_to_screen_name": "joshspero", 
+      "in_reply_to_user_id": 27892256, 
+      "id": 627526022632722432
+    }, 
+    "statuses_count": 7643, 
+    "description": "Kew-trained botanist, science writer & broadcaster. \n\nAmbassador for The Royal Horticultural Society. Botanist at @LizEarle. Brand Ambassador for @FiskarsUK.", 
+    "friends_count": 2212, 
+    "profile_link_color": "4A913C", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/564461451025207296/eBEO6IoN_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/189658688/1433007204", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/561174551187316736/-xfxq0m1.jpeg", 
+    "screen_name": "Botanygeek", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 2653, 
+    "name": "James Wong", 
+    "url": "http://t.co/SBJXtNjzDD", 
+    "created_at": "Sat Sep 11 21:44:18 +0000 2010", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0009904371584699453, 
+  "%_of_my_followers_who_follow_them": 0.04923599320882852, 
+  "profile_word_counts": [
+    [
+      "grow", 
+      5
+    ], 
+    [
+      "food", 
+      5
+    ], 
+    [
+      "gardener", 
+      4
+    ], 
+    [
+      "gardening", 
+      4
+    ], 
+    [
+      "garden", 
+      4
+    ]
+  ], 
+  "id": 189658688, 
+  "gender_breakdown": {
+    "M": 0.1724137931034483, 
+    "?": 0.4827586206896552, 
+    "F": 0.3448275862068966
+  }
+}

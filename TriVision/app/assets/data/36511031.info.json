@@ -1,0 +1,74 @@
+{
+  "screen_name": "SFGate", 
+  "raw_profile": {
+    "id": 36511031, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "EFEFEF", 
+    "profile_text_color": "333333", 
+    "followers_count": 209831, 
+    "location": "San Francisco", 
+    "profile_background_color": "131516", 
+    "listed_count": 5464, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Wild chase, gunfight in San Jose ends in crash http://t.co/D8NsgGjEwp", 
+      "created_at": "Sat Aug 01 21:32:47 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "urls": {
+        "http://t.co/D8NsgGjEwp": "http://sfg.ly/1JErXW9"
+      }, 
+      "id": 627592838050480128
+    }, 
+    "utc_offset": -25200, 
+    "statuses_count": 59298, 
+    "description": "Twitter home of http://t.co/iRJqsc63r7. The authority on all things San Francisco and the Bay Area.", 
+    "friends_count": 695, 
+    "profile_link_color": "009999", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/530413143134973952/i_WH02pd_normal.png", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/36511031/1415045872", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif", 
+    "name": "SFGate", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 1867, 
+    "screen_name": "SFGate", 
+    "url": "http://t.co/ICLiADid3Z", 
+    "created_at": "Wed Apr 29 22:55:39 +0000 2009", 
+    "time_zone": "Pacific Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.00016203516163007373, 
+  "%_of_my_followers_who_follow_them": 0.057724957555178265, 
+  "profile_word_counts": [
+    [
+      "francisco", 
+      4
+    ], 
+    [
+      "san", 
+      4
+    ], 
+    [
+      "us", 
+      4
+    ], 
+    [
+      "charity", 
+      4
+    ], 
+    [
+      "media", 
+      3
+    ]
+  ], 
+  "id": 36511031, 
+  "gender_breakdown": {
+    "M": 0.23529411764705882, 
+    "?": 0.6176470588235294, 
+    "F": 0.14705882352941177
+  }
+}

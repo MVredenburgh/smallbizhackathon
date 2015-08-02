@@ -1,0 +1,80 @@
+{
+  "screen_name": "Inc", 
+  "raw_profile": {
+    "id": 16896485, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "DAECF4", 
+    "profile_text_color": "663B12", 
+    "followers_count": 1271166, 
+    "location": "New York City", 
+    "profile_background_color": "E8E8E8", 
+    "listed_count": 24808, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Finally, 7 short videos reveal the truth about marketing. @Sales_Source http://t.co/W9plUi3oP2", 
+      "created_at": "Sat May 16 20:15:15 +0000 2015", 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "Sales_Source", 
+          "name": "Geoffrey James", 
+          "id": 20513456
+        }
+      ], 
+      "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>", 
+      "urls": {
+        "http://t.co/W9plUi3oP2": "http://bit.ly/1FquuTk"
+      }, 
+      "id": 599669459280855041
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 81770, 
+    "description": "Everything you need to know to start and grow your business now.", 
+    "friends_count": 1686, 
+    "profile_link_color": "CC3366", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/539435715482750976/mzF0N56L_normal.jpeg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/16896485/1430144814", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000172834508/aGUoUmqB.jpeg", 
+    "screen_name": "Inc", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 657, 
+    "name": "Inc. ", 
+    "url": "http://t.co/YslvkphWzr", 
+    "created_at": "Tue Oct 21 23:47:30 +0000 2008", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 5.664091078584544e-05, 
+  "%_of_my_followers_who_follow_them": 0.12224108658743633, 
+  "profile_word_counts": [
+    [
+      "us", 
+      8
+    ], 
+    [
+      "charity", 
+      7
+    ], 
+    [
+      "business", 
+      6
+    ], 
+    [
+      "world", 
+      5
+    ], 
+    [
+      "people", 
+      4
+    ]
+  ], 
+  "id": 16896485, 
+  "gender_breakdown": {
+    "M": 0.2777777777777778, 
+    "?": 0.5555555555555556, 
+    "F": 0.16666666666666666
+  }
+}

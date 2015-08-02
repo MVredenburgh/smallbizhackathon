@@ -1,0 +1,75 @@
+{
+  "screen_name": "HuffPostGreen", 
+  "raw_profile": {
+    "id": 45577446, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "EADEAA", 
+    "profile_text_color": "333333", 
+    "followers_count": 355966, 
+    "location": "New York, NY", 
+    "profile_background_color": "3A7D00", 
+    "listed_count": 10127, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Homemade bumper device helps blind dog walk with confidence.\nhttp://t.co/9qP9ZZySVz", 
+      "created_at": "Sat Aug 01 21:00:10 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>", 
+      "urls": {
+        "http://t.co/9qP9ZZySVz": "http://huff.to/1IuLkM2"
+      }, 
+      "retweet_count": 9, 
+      "id": 627584632062668800, 
+      "favorite_count": 9
+    }, 
+    "utc_offset": -18000, 
+    "statuses_count": 59007, 
+    "description": "Latest news on energy, environment, animals and more. Curated by @j_gerks and @nvisser", 
+    "friends_count": 1146, 
+    "profile_link_color": "61A900", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/496305708153843712/WXbN5Gam_normal.jpeg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/45577446/1348515916", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/664103863/1637fe4ef73b23f49b841f37a06ff3af.png", 
+    "screen_name": "HuffPostGreen", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 1180, 
+    "name": "HuffPost Green", 
+    "url": "http://t.co/VBBWSo5Gcb", 
+    "created_at": "Mon Jun 08 14:36:11 +0000 2009", 
+    "time_zone": "Quito", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0002809257063876887, 
+  "%_of_my_followers_who_follow_them": 0.1697792869269949, 
+  "profile_word_counts": [
+    [
+      "food", 
+      12
+    ], 
+    [
+      "organic", 
+      10
+    ], 
+    [
+      "nature", 
+      9
+    ], 
+    [
+      "green", 
+      8
+    ], 
+    [
+      "world", 
+      7
+    ]
+  ], 
+  "id": 45577446, 
+  "gender_breakdown": {
+    "M": 0.14, 
+    "?": 0.6, 
+    "F": 0.26
+  }
+}

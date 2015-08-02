@@ -1,0 +1,126 @@
+{
+  "screen_name": "UrbnEarth", 
+  "raw_profile": {
+    "id": 1711307108, 
+    "profile_sidebar_fill_color": "DDEEF6", 
+    "profile_text_color": "333333", 
+    "followers_count": 589, 
+    "profile_background_color": "FFFFFF", 
+    "listed_count": 13, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "I'm giving $10 to @AccountLab w/ #tinygive to support #NepalEarthquake relief efforts! https://t.co/wk1mG7EPqc https://t.co/KtEAoA95bn", 
+      "created_at": "Fri May 01 17:05:27 +0000 2015", 
+      "hashtags": [
+        "tinygive", 
+        "NepalEarthquake"
+      ], 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "AccountLab", 
+          "name": "Accountability Lab", 
+          "id": 376791248
+        }
+      ], 
+      "source": "<a href=\"https://tinygive.com\" rel=\"nofollow\">tinyGive</a>", 
+      "urls": {
+        "https://t.co/wk1mG7EPqc": "https://tinygive.com/campaigns/support-the-nepal-earthquake-relief-fund"
+      }, 
+      "media": [
+        {
+          "source_user_id": 123085580, 
+          "source_status_id_str": "593124120251871234", 
+          "expanded_url": "http://twitter.com/tinyGive/status/593124120251871234/photo/1", 
+          "display_url": "pic.twitter.com/KtEAoA95bn", 
+          "url": "https://t.co/KtEAoA95bn", 
+          "media_url_https": "https://pbs.twimg.com/media/CDsyzbiWMAAw2Lu.png", 
+          "source_user_id_str": "123085580", 
+          "source_status_id": 593124120251871234, 
+          "id_str": "593123635075887104", 
+          "sizes": {
+            "small": {
+              "h": 170, 
+              "w": 340, 
+              "resize": "fit"
+            }, 
+            "large": {
+              "h": 512, 
+              "w": 1024, 
+              "resize": "fit"
+            }, 
+            "medium": {
+              "h": 300, 
+              "w": 600, 
+              "resize": "fit"
+            }, 
+            "thumb": {
+              "h": 150, 
+              "w": 150, 
+              "resize": "crop"
+            }
+          }, 
+          "indices": [
+            111, 
+            134
+          ], 
+          "type": "photo", 
+          "id": 593123635075887104, 
+          "media_url": "http://pbs.twimg.com/media/CDsyzbiWMAAw2Lu.png"
+        }
+      ], 
+      "id": 594185877502427136, 
+      "favorite_count": 1
+    }, 
+    "utc_offset": -25200, 
+    "statuses_count": 270, 
+    "description": "A better way to start growing from a company looking to inspire and cultivate the next generation of growers.", 
+    "friends_count": 1390, 
+    "profile_link_color": "48A7F0", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/514596189925163008/3G7qhYP6_normal.png", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1711307108/1405978222", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/443088166644248576/sB5l7nNM.png", 
+    "screen_name": "UrbnEarth", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 68, 
+    "name": "UrbnEarth", 
+    "url": "http://t.co/VetayInNAI", 
+    "created_at": "Thu Aug 29 23:57:04 +0000 2013", 
+    "time_zone": "Pacific Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.9507640067911715, 
+  "%_of_my_followers_who_follow_them": 0.9507640067911715, 
+  "profile_word_counts": [
+    [
+      "food", 
+      36
+    ], 
+    [
+      "love", 
+      34
+    ], 
+    [
+      "blogger", 
+      29
+    ], 
+    [
+      "mom", 
+      27
+    ], 
+    [
+      "social", 
+      23
+    ]
+  ], 
+  "id": 1711307108, 
+  "gender_breakdown": {
+    "M": 0.21964285714285714, 
+    "?": 0.4982142857142857, 
+    "F": 0.28214285714285714
+  }
+}

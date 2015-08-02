@@ -1,0 +1,75 @@
+{
+  "screen_name": "Entrepreneur", 
+  "raw_profile": {
+    "id": 19407053, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "FFFFFF", 
+    "profile_text_color": "363636", 
+    "followers_count": 1264457, 
+    "location": "NYC | Orange County, CA", 
+    "profile_background_color": "223F51", 
+    "listed_count": 20357, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "5 Tips to Get a Grip on All That Stress http://t.co/JCyLYhCDDC", 
+      "created_at": "Sun May 17 03:05:04 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>", 
+      "urls": {
+        "http://t.co/JCyLYhCDDC": "http://entm.ag/1JKQOos"
+      }, 
+      "retweet_count": 23, 
+      "id": 599772596746514432, 
+      "favorite_count": 12
+    }, 
+    "utc_offset": -25200, 
+    "statuses_count": 64061, 
+    "description": "Inspiring, informing and celebrating entrepreneurs since 1973. Please tweet @EntCommunity for questions and event live-feeds.", 
+    "friends_count": 1162, 
+    "profile_link_color": "365977", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/474753665970868224/GcoCzmcI_normal.jpeg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/19407053/1430784325", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/581585015047254016/CughMn3Z.jpg", 
+    "screen_name": "Entrepreneur", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 275, 
+    "name": "Entrepreneur", 
+    "url": "http://t.co/adIkCuscVR", 
+    "created_at": "Fri Jan 23 18:46:10 +0000 2009", 
+    "time_zone": "Pacific Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 6.247741125241902e-05, 
+  "%_of_my_followers_who_follow_them": 0.13412563667232597, 
+  "profile_word_counts": [
+    [
+      "us", 
+      9
+    ], 
+    [
+      "business", 
+      8
+    ], 
+    [
+      "world", 
+      8
+    ], 
+    [
+      "tweets", 
+      6
+    ], 
+    [
+      "charity", 
+      6
+    ]
+  ], 
+  "id": 19407053, 
+  "gender_breakdown": {
+    "M": 0.20253164556962025, 
+    "?": 0.6075949367088608, 
+    "F": 0.189873417721519
+  }
+}

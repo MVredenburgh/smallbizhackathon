@@ -1,0 +1,85 @@
+{
+  "screen_name": "gardenality", 
+  "raw_profile": {
+    "id": 61783540, 
+    "profile_sidebar_fill_color": "DDEEF6", 
+    "profile_text_color": "333333", 
+    "followers_count": 10787, 
+    "location": "McDonough, GA", 
+    "profile_background_color": "C0DEED", 
+    "listed_count": 187, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Insect Prevention On Fruit Trees and Plants http://t.co/Oa4jSMD4xt via @Gardenality #Gardening #Plants #InsectPrevention #fruittrees", 
+      "created_at": "Thu Jul 30 14:21:27 +0000 2015", 
+      "hashtags": [
+        "Gardening", 
+        "Plants", 
+        "InsectPrevention", 
+        "fruittrees"
+      ], 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "gardenality", 
+          "name": "Gardenality.com", 
+          "id": 61783540
+        }
+      ], 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "urls": {
+        "http://t.co/Oa4jSMD4xt": "http://www.gardenality.com/Articles/148/Problems-and-Solutions/Insects/Insect-Prevention-On-Fruit-Trees-and-Plants/default.html"
+      }, 
+      "id": 626759515279638528
+    }, 
+    "utc_offset": -10800, 
+    "statuses_count": 955, 
+    "description": "Interactive gardening community and wiki. Plant search, create gardens, ask or answer questions and simply love gardening with gardeners around the world.", 
+    "friends_count": 10979, 
+    "profile_link_color": "0084B4", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/1266355791/twitterGardenalityLogo_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/61783540/1402945062", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/214981948/twitterBg.jpg", 
+    "screen_name": "gardenality", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 23, 
+    "name": "Gardenality.com", 
+    "url": "http://t.co/TYsvwKPpT1", 
+    "created_at": "Fri Jul 31 14:34:20 +0000 2009", 
+    "time_zone": "Atlantic Time (Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0030592379716325208, 
+  "%_of_my_followers_who_follow_them": 0.05602716468590832, 
+  "profile_word_counts": [
+    [
+      "garden", 
+      12
+    ], 
+    [
+      "people", 
+      6
+    ], 
+    [
+      "gardening", 
+      6
+    ], 
+    [
+      "nature", 
+      6
+    ], 
+    [
+      "author", 
+      5
+    ]
+  ], 
+  "id": 61783540, 
+  "gender_breakdown": {
+    "M": 0.06060606060606061, 
+    "?": 0.6060606060606061, 
+    "F": 0.3333333333333333
+  }
+}

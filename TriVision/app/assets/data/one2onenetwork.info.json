@@ -1,0 +1,86 @@
+{
+  "screen_name": "One2OneNetwork", 
+  "raw_profile": {
+    "id": 15393033, 
+    "profile_sidebar_fill_color": "92BB1B", 
+    "profile_text_color": "050505", 
+    "followers_count": 9265, 
+    "profile_background_color": "FFFFFF", 
+    "listed_count": 291, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Looks amazing Taylor! RT @thedailytay: perfect summer drink with @AlizeInColor #alizeincolor http://t.co/9VghUwslwj", 
+      "created_at": "Fri Jul 31 21:40:26 +0000 2015", 
+      "hashtags": [
+        "alizeincolor"
+      ], 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "TheDailyTay", 
+          "name": "Taylor Wolfe", 
+          "id": 148373618
+        }, 
+        {
+          "screen_name": "AlizeInColor", 
+          "name": "Alize\u0301", 
+          "id": 41455759
+        }
+      ], 
+      "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>", 
+      "urls": {
+        "http://t.co/9VghUwslwj": "http://www.thedailytay.com/2015/07/the-perfect-summer-drink.html"
+      }, 
+      "id": 627232377723613185
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 14469, 
+    "description": "O2O is *THE* social influencer network for women. Join our community of influencers! Fun Projects. Cool Perks. Nice People. (Tweets by @justmalia)", 
+    "friends_count": 6784, 
+    "profile_link_color": "5A1169", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/552903509410983936/sIM6LRP5_normal.png", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/15393033/1420658807", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/645925378/xg29invoi0nll6e1m6d1.jpeg", 
+    "screen_name": "One2OneNetwork", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 1182, 
+    "name": "One2OneNetwork", 
+    "url": "http://t.co/31ESASDR", 
+    "created_at": "Fri Jul 11 16:02:51 +0000 2008", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0032379924446842958, 
+  "%_of_my_followers_who_follow_them": 0.050933786078098474, 
+  "profile_word_counts": [
+    [
+      "mom", 
+      12
+    ], 
+    [
+      "blogger", 
+      11
+    ], 
+    [
+      "love", 
+      10
+    ], 
+    [
+      "travel", 
+      7
+    ], 
+    [
+      "media", 
+      7
+    ]
+  ], 
+  "id": 15393033, 
+  "gender_breakdown": {
+    "M": 0.03333333333333333, 
+    "?": 0.36666666666666664, 
+    "F": 0.6
+  }
+}
