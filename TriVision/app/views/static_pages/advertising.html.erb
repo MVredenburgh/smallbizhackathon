@@ -1,19 +1,47 @@
 <div class="center jumbotron">
   <div class="row">
     <h2>Advertising Channels</h2>
+    
+    
     <h3>Communities:</h3>
     <li>
       <p>Joining and participate in the following communities to reach more potential users:</p>
     </li>
+    
+    <% @communities.each do |profile| %>
     <div class="wrap">
       <div class="col-md-12">
-	<div class="row">
-	  <div class="col-md-1">
-	    <img alt="logo" src="assets/16896485.profiles.jpg" height="35" width="35"/>
-	  </div>
-	</div>  
+        <div class="row">
+          <div class="col-md-1">
+
+              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>"></img>
+
+              Name: <span><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
+
+              Location: <span><%= profile['raw_profile']['location'] =%></span>
+
+              Description: <span><%= profile['raw_profile']['description'] =%></span>
+
+              Description: <span><%= profile['raw_profile']['description'] =%></span>
+
+              %_of_their_followers_who_follow_me: <span><%= (profile['%_of_their_followers_who_follow_me']*(1000.0)).round / 10.0 =%></span>
+
+              %_of_my_followers_who_follow_them: <span><%= (profile['%_of_my_followers_who_follow_them']*(1000.0)).round / 10.0 =%></span>
+
+              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png"></img>
+
+              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg"></img>
+
+              Gender pic: <img src="/assets/<%= profile['id'] =%>.gender.png"></img>
+          </div>
+        </div>  
 	    <h4>test</h4>
       </div>  
+    </div>
+    <% end %>
+
+    
+      
     <!-- <%= @master_json =%> -->
-  </div>
+
 </div>  
