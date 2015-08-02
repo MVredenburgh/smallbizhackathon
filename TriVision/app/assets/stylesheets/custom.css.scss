@@ -39,14 +39,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -55,6 +55,7 @@ h2 {
 }
 
 h3{
+  font-size: 1.8em;	
   text-align: left;
   }	
 
@@ -135,7 +136,7 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
+      font-size: 1em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -258,3 +259,9 @@ img {
     border:0px;
     margin:-2px;
 }
+
+.wrap {
+padding: 35px;
+background-color: #F7F7F7;
+border: 1px solid #DDD;
+	}
