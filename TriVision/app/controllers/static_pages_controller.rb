@@ -1,8 +1,17 @@
+require 'json'
+
 class StaticPagesController < ApplicationController
   def sign_up
   end
 
   def advertising
+    data_root = File.expand_path(File.join(File.dirname(__FILE__),'../assets/data'))  
+    # puts "data_root", data_root
+    master_file = data_root+"/urbnearth.master.json"
+    # puts "master_file", master_file
+    @master_json = JSON.parse(File.read(master_file))
+    puts "master_json", @master_json
+    
   end
 
   def marketing
