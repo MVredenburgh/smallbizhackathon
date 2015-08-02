@@ -1,0 +1,73 @@
+{
+  "screen_name": "Phil_Radford", 
+  "raw_profile": {
+    "id": 31128730, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "DDEEF6", 
+    "profile_text_color": "333333", 
+    "followers_count": 44298, 
+    "location": "washington, dc", 
+    "profile_background_color": "C0DEED", 
+    "listed_count": 1848, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "\"Every time something like this happens, someone says we should have a conversation about race. We don't need more talk.\" - Pres Obama", 
+      "created_at": "Sat Jun 27 04:48:11 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
+      "retweet_count": 9, 
+      "id": 614656445452193792, 
+      "favorite_count": 9
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 1653, 
+    "description": "clean energy + environmental + democracy leader | former greenpeace ceo | solar + electric car lover | poker player | Book Phil as a speaker - 800.225.4575", 
+    "friends_count": 28164, 
+    "profile_link_color": "0084B4", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/462593175853338624/4mxqEmWB_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/31128730/1399973552", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000093884382/dff869edc99186c7b6ddcd07ca4fc073.jpeg", 
+    "name": "Phil Radford", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 3351, 
+    "screen_name": "Phil_Radford", 
+    "url": "http://t.co/0JfuYcofgB", 
+    "created_at": "Tue Apr 14 14:07:33 +0000 2009", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0008352521558535374, 
+  "%_of_my_followers_who_follow_them": 0.06281833616298811, 
+  "profile_word_counts": [
+    [
+      "environmental", 
+      6
+    ], 
+    [
+      "food", 
+      6
+    ], 
+    [
+      "education", 
+      4
+    ], 
+    [
+      "business", 
+      4
+    ], 
+    [
+      "media", 
+      4
+    ]
+  ], 
+  "id": 31128730, 
+  "gender_breakdown": {
+    "M": 0.13513513513513514, 
+    "?": 0.7567567567567568, 
+    "F": 0.10810810810810811
+  }
+}

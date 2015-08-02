@@ -1,0 +1,76 @@
+{
+  "screen_name": "GxChicago", 
+  "raw_profile": {
+    "id": 330773106, 
+    "profile_sidebar_fill_color": "EFEFEF", 
+    "profile_text_color": "333333", 
+    "followers_count": 6552, 
+    "location": "Chicago, IL", 
+    "profile_background_color": "7D7F80", 
+    "listed_count": 228, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "The bees are up at it. #TGIF http://t.co/RSaluU3LBe", 
+      "created_at": "Fri Jul 24 11:37:51 +0000 2015", 
+      "hashtags": [
+        "TGIF"
+      ], 
+      "retweeted": false, 
+      "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>", 
+      "urls": {
+        "http://t.co/RSaluU3LBe": "http://ow.ly/i/bZApg"
+      }, 
+      "id": 624544016831524864, 
+      "favorite_count": 1
+    }, 
+    "utc_offset": -18000, 
+    "statuses_count": 3603, 
+    "description": "America's largest green business community. Over 20 businesses + 1500 people. A fun group of people taking green mainstream. Tweets #Green #Sustainability #Chi", 
+    "friends_count": 6299, 
+    "profile_link_color": "009999", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/1560932713/greenex_1_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/330773106/1398794652", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif", 
+    "screen_name": "GxChicago", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 40, 
+    "name": "Green Exchange", 
+    "url": "http://t.co/GUbavItsTA", 
+    "created_at": "Thu Jul 07 03:59:22 +0000 2011", 
+    "time_zone": "Central Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.004578754578754579, 
+  "%_of_my_followers_who_follow_them": 0.050933786078098474, 
+  "profile_word_counts": [
+    [
+      "social", 
+      5
+    ], 
+    [
+      "people", 
+      5
+    ], 
+    [
+      "environmental", 
+      4
+    ], 
+    [
+      "media", 
+      4
+    ], 
+    [
+      "us", 
+      4
+    ]
+  ], 
+  "id": 330773106, 
+  "gender_breakdown": {
+    "M": 0.1, 
+    "?": 0.9, 
+    "F": 0.0
+  }
+}

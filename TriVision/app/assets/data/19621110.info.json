@@ -1,0 +1,114 @@
+{
+  "screen_name": "good", 
+  "raw_profile": {
+    "id": 19621110, 
+    "verified": true, 
+    "profile_sidebar_fill_color": "FFFFFF", 
+    "profile_text_color": "000000", 
+    "followers_count": 956883, 
+    "location": "Los Angeles, CA", 
+    "profile_background_color": "131516", 
+    "listed_count": 21903, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Young, attractive couple reacts to seeing each other as old people.\nhttp://t.co/jFjixlcnRp http://t.co/Z0nRi9pPnh", 
+      "created_at": "Fri May 15 23:40:24 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "urls": {
+        "http://t.co/jFjixlcnRp": "http://bit.ly/1bVh4AO"
+      }, 
+      "media": [
+        {
+          "expanded_url": "http://twitter.com/good/status/599358700919238656/photo/1", 
+          "sizes": {
+            "large": {
+              "h": 535, 
+              "w": 1024, 
+              "resize": "fit"
+            }, 
+            "small": {
+              "h": 177, 
+              "w": 340, 
+              "resize": "fit"
+            }, 
+            "medium": {
+              "h": 313, 
+              "w": 600, 
+              "resize": "fit"
+            }, 
+            "thumb": {
+              "h": 150, 
+              "w": 150, 
+              "resize": "crop"
+            }
+          }, 
+          "url": "http://t.co/Z0nRi9pPnh", 
+          "media_url_https": "https://pbs.twimg.com/media/CFFZkAkVEAExiZS.jpg", 
+          "id_str": "599358700579524609", 
+          "indices": [
+            91, 
+            113
+          ], 
+          "media_url": "http://pbs.twimg.com/media/CFFZkAkVEAExiZS.jpg", 
+          "type": "photo", 
+          "id": 599358700579524609, 
+          "display_url": "pic.twitter.com/Z0nRi9pPnh"
+        }
+      ], 
+      "retweet_count": 36, 
+      "id": 599358700919238656, 
+      "favorite_count": 46
+    }, 
+    "utc_offset": -25200, 
+    "statuses_count": 34982, 
+    "description": "A magazine for the global citizen", 
+    "friends_count": 1047, 
+    "profile_link_color": "1892F0", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/553692751926022144/Addl1nZw_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/19621110/1424458754", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000091396252/0e460745b616d96d967948b6c4858e67.jpeg", 
+    "name": "GOOD ", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 5023, 
+    "screen_name": "good", 
+    "url": "http://t.co/B2IlfCvK5b", 
+    "created_at": "Tue Jan 27 22:24:55 +0000 2009", 
+    "time_zone": "Pacific Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 8.987514670027579e-05, 
+  "%_of_my_followers_who_follow_them": 0.1460101867572156, 
+  "profile_word_counts": [
+    [
+      "world", 
+      7
+    ], 
+    [
+      "food", 
+      7
+    ], 
+    [
+      "social", 
+      7
+    ], 
+    [
+      "us", 
+      6
+    ], 
+    [
+      "charity", 
+      6
+    ]
+  ], 
+  "id": 19621110, 
+  "gender_breakdown": {
+    "M": 0.1511627906976744, 
+    "?": 0.686046511627907, 
+    "F": 0.16279069767441862
+  }
+}

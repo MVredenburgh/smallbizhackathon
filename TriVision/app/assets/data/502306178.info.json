@@ -1,0 +1,79 @@
+{
+  "screen_name": "Nourishmat", 
+  "raw_profile": {
+    "id": 502306178, 
+    "profile_sidebar_fill_color": "DDFFCD", 
+    "profile_text_color": "73382A", 
+    "followers_count": 826, 
+    "location": "Washington, DC", 
+    "profile_background_color": "FFFFFF", 
+    "listed_count": 17, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "@falonfatemi just read through your site - honestly - we share the same views and I appreciate your hustle", 
+      "created_at": "Fri Jun 06 03:27:18 +0000 2014", 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "falonfatemi", 
+          "name": "Falon Fatemi", 
+          "id": 15717794
+        }
+      ], 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "in_reply_to_screen_name": "falonfatemi", 
+      "in_reply_to_user_id": 15717794, 
+      "id": 474754377148686337
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 2445, 
+    "description": "Start growing fresh all-natural produce with the Nourishmat.", 
+    "friends_count": 1275, 
+    "profile_link_color": "0084B4", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/3727530507/d38ae4ed2b1bfbdcaad03baf24d22adb_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/502306178/1369837370", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000058354791/0511f307a811782cc4443165d8d08338.jpeg", 
+    "screen_name": "Nourishmat", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 175, 
+    "name": "nourishmat", 
+    "url": "http://t.co/Nnx1cZ6v2u", 
+    "created_at": "Sat Feb 25 00:52:35 +0000 2012", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.06658595641646489, 
+  "%_of_my_followers_who_follow_them": 0.0933786078098472, 
+  "profile_word_counts": [
+    [
+      "food", 
+      6
+    ], 
+    [
+      "organic", 
+      5
+    ], 
+    [
+      "new", 
+      5
+    ], 
+    [
+      "innovation", 
+      4
+    ], 
+    [
+      "technology", 
+      4
+    ]
+  ], 
+  "id": 502306178, 
+  "gender_breakdown": {
+    "M": 0.34545454545454546, 
+    "?": 0.41818181818181815, 
+    "F": 0.23636363636363636
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "screen_name": "ruralmoms", 
+  "raw_profile": {
+    "id": 16050296, 
+    "profile_sidebar_fill_color": "F7FCF8", 
+    "profile_text_color": "663B12", 
+    "followers_count": 119112, 
+    "location": "Salt Lick, KY", 
+    "profile_background_color": "51995C", 
+    "listed_count": 1286, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "Easy Fresh and Spicy Snack Hack http://t.co/tHz9tRk4uM via @organized31", 
+      "created_at": "Sat Aug 01 21:24:05 +0000 2015", 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "organized31", 
+          "name": "Susan", 
+          "id": 1239971041
+        }
+      ], 
+      "source": "<a href=\"http://triberr.com\" rel=\"nofollow\">Triberr</a>", 
+      "urls": {
+        "http://t.co/tHz9tRk4uM": "http://goo.gl/KklBjs"
+      }, 
+      "id": 627590651270533120
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 62665, 
+    "description": "Barb Webb Author/Columnist/Blogger - Empowering #moms with hand-picked tools and information. #family #food #farm #eco #DIY #travel ~ ruralmoms@gmail.com", 
+    "friends_count": 93968, 
+    "profile_link_color": "1F98C7", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/1268422600/Rural_Mom_Button_normal.png", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/16050296/1399170723", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/215885867/Rural_Mom_Button.png", 
+    "screen_name": "ruralmoms", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 627, 
+    "name": "Rural Mom", 
+    "url": "http://t.co/G2YT7h58E2", 
+    "created_at": "Sat Aug 30 02:38:55 +0000 2008", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0006296594801531332, 
+  "%_of_my_followers_who_follow_them": 0.1273344651952462, 
+  "profile_word_counts": [
+    [
+      "mom", 
+      18
+    ], 
+    [
+      "blogger", 
+      18
+    ], 
+    [
+      "love", 
+      11
+    ], 
+    [
+      "family", 
+      8
+    ], 
+    [
+      "products", 
+      8
+    ]
+  ], 
+  "id": 16050296, 
+  "gender_breakdown": {
+    "M": 0.08, 
+    "?": 0.5466666666666666, 
+    "F": 0.37333333333333335
+  }
+}

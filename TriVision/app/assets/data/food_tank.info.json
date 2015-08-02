@@ -1,0 +1,110 @@
+{
+  "screen_name": "Food_Tank", 
+  "raw_profile": {
+    "id": 921759169, 
+    "profile_sidebar_fill_color": "DDEEF6", 
+    "profile_text_color": "333333", 
+    "followers_count": 127280, 
+    "location": "New Orleans, LA", 
+    "profile_background_color": "C0DEED", 
+    "listed_count": 2176, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "10 reasons why we should all thank a farmer today! http://t.co/43gwPQFVmS", 
+      "created_at": "Sat Aug 01 18:20:03 +0000 2015", 
+      "retweeted": false, 
+      "source": "<a href=\"https://ads.twitter.com\" rel=\"nofollow\">Twitter Ads</a>", 
+      "media": [
+        {
+          "expanded_url": "http://twitter.com/Food_Tank/status/627544336314437632/photo/1", 
+          "sizes": {
+            "large": {
+              "h": 620, 
+              "w": 236, 
+              "resize": "fit"
+            }, 
+            "small": {
+              "h": 620, 
+              "w": 236, 
+              "resize": "fit"
+            }, 
+            "medium": {
+              "h": 620, 
+              "w": 236, 
+              "resize": "fit"
+            }, 
+            "thumb": {
+              "h": 150, 
+              "w": 150, 
+              "resize": "crop"
+            }
+          }, 
+          "url": "http://t.co/43gwPQFVmS", 
+          "media_url_https": "https://pbs.twimg.com/media/CK8vnKhUcAAoNRa.jpg", 
+          "id_str": "625771223113297920", 
+          "indices": [
+            51, 
+            73
+          ], 
+          "media_url": "http://pbs.twimg.com/media/CK8vnKhUcAAoNRa.jpg", 
+          "type": "photo", 
+          "id": 625771223113297920, 
+          "display_url": "pic.twitter.com/43gwPQFVmS"
+        }
+      ], 
+      "retweet_count": 6, 
+      "id": 627544336314437632, 
+      "favorite_count": 3
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 13698, 
+    "description": "Join Food Tank Today Because Together We'll Change the Food System! @DaniNierenberg, President. Sign-Up: http://t.co/cXgMpjdx7H", 
+    "friends_count": 125054, 
+    "profile_link_color": "0084B4", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/546914620959490050/Lhv-Re_k_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/921759169/1400027885", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/437724130314432512/xpTdi_5-.jpeg", 
+    "screen_name": "Food_Tank", 
+    "lang": "en", 
+    "profile_background_tile": true, 
+    "favourites_count": 36117, 
+    "name": "Food Tank", 
+    "url": "http://t.co/cIZsTFGV0y", 
+    "created_at": "Fri Nov 02 20:44:28 +0000 2012", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0008563796354494029, 
+  "%_of_my_followers_who_follow_them": 0.18505942275042445, 
+  "profile_word_counts": [
+    [
+      "food", 
+      18
+    ], 
+    [
+      "social", 
+      11
+    ], 
+    [
+      "us", 
+      9
+    ], 
+    [
+      "media", 
+      9
+    ], 
+    [
+      "gardening", 
+      8
+    ]
+  ], 
+  "id": 921759169, 
+  "gender_breakdown": {
+    "M": 0.11926605504587157, 
+    "?": 0.6972477064220184, 
+    "F": 0.1834862385321101
+  }
+}

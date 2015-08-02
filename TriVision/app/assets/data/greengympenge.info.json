@@ -1,0 +1,178 @@
+{
+  "screen_name": "GreenGymPenge", 
+  "raw_profile": {
+    "id": 1101353329, 
+    "profile_sidebar_fill_color": "DDEEF6", 
+    "profile_text_color": "333333", 
+    "followers_count": 7699, 
+    "location": "Winsford Gardens, SE20 7RN, UK", 
+    "profile_background_color": "A5D63A", 
+    "listed_count": 90, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "retweeted_status": {
+        "lang": "en", 
+        "favorited": false, 
+        "truncated": false, 
+        "text": "Peacock on thistle flower #butterfly #nature http://t.co/dFDaR8fS5T", 
+        "created_at": "Fri Jul 31 08:39:28 +0000 2015", 
+        "hashtags": [
+          "butterfly", 
+          "nature"
+        ], 
+        "retweeted": false, 
+        "source": "<a href=\"http://www.apple.com\" rel=\"nofollow\">iOS</a>", 
+        "media": [
+          {
+            "expanded_url": "http://twitter.com/lisasardini/status/627035840636690432/photo/1", 
+            "sizes": {
+              "large": {
+                "h": 554, 
+                "w": 554, 
+                "resize": "fit"
+              }, 
+              "small": {
+                "h": 340, 
+                "w": 340, 
+                "resize": "fit"
+              }, 
+              "medium": {
+                "h": 554, 
+                "w": 554, 
+                "resize": "fit"
+              }, 
+              "thumb": {
+                "h": 150, 
+                "w": 150, 
+                "resize": "crop"
+              }
+            }, 
+            "url": "http://t.co/dFDaR8fS5T", 
+            "media_url_https": "https://pbs.twimg.com/media/CLOtxlgWsAA2d7V.jpg", 
+            "id_str": "627035840527642624", 
+            "indices": [
+              45, 
+              67
+            ], 
+            "media_url": "http://pbs.twimg.com/media/CLOtxlgWsAA2d7V.jpg", 
+            "type": "photo", 
+            "id": 627035840527642624, 
+            "display_url": "pic.twitter.com/dFDaR8fS5T"
+          }
+        ], 
+        "retweet_count": 49, 
+        "id": 627035840636690432, 
+        "favorite_count": 75
+      }, 
+      "truncated": false, 
+      "text": "RT @lisasardini: Peacock on thistle flower #butterfly #nature http://t.co/dFDaR8fS5T", 
+      "created_at": "Sat Aug 01 20:36:05 +0000 2015", 
+      "hashtags": [
+        "butterfly", 
+        "nature"
+      ], 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "lisasardini", 
+          "name": "lisa sardini", 
+          "id": 1370358499
+        }
+      ], 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "media": [
+        {
+          "source_user_id": 1370358499, 
+          "source_status_id_str": "627035840636690432", 
+          "expanded_url": "http://twitter.com/lisasardini/status/627035840636690432/photo/1", 
+          "display_url": "pic.twitter.com/dFDaR8fS5T", 
+          "url": "http://t.co/dFDaR8fS5T", 
+          "media_url_https": "https://pbs.twimg.com/media/CLOtxlgWsAA2d7V.jpg", 
+          "source_user_id_str": "1370358499", 
+          "source_status_id": 627035840636690432, 
+          "id_str": "627035840527642624", 
+          "sizes": {
+            "large": {
+              "h": 554, 
+              "w": 554, 
+              "resize": "fit"
+            }, 
+            "small": {
+              "h": 340, 
+              "w": 340, 
+              "resize": "fit"
+            }, 
+            "medium": {
+              "h": 554, 
+              "w": 554, 
+              "resize": "fit"
+            }, 
+            "thumb": {
+              "h": 150, 
+              "w": 150, 
+              "resize": "crop"
+            }
+          }, 
+          "indices": [
+            62, 
+            84
+          ], 
+          "type": "photo", 
+          "id": 627035840527642624, 
+          "media_url": "http://pbs.twimg.com/media/CLOtxlgWsAA2d7V.jpg"
+        }
+      ], 
+      "retweet_count": 49, 
+      "id": 627578570592899072
+    }, 
+    "utc_offset": 7200, 
+    "statuses_count": 12507, 
+    "description": "Penge Green Gym - an innovative way to get active exercise outdoors benefiting your health & wellbeing, your community & local environment. Wed 11-2 London SE20", 
+    "friends_count": 6516, 
+    "profile_link_color": "2D8F14", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/3756090077/ca3b55ee3a15b520f56a7dc3efc3506c_normal.jpeg", 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1101353329/1430768986", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/595146321532571648/yp-9Hwcm.jpg", 
+    "screen_name": "GreenGymPenge", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 4084, 
+    "name": "Penge Green Gym", 
+    "url": "http://t.co/IqyVtuo2yu", 
+    "created_at": "Fri Jan 18 16:06:17 +0000 2013", 
+    "time_zone": "Amsterdam", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.0038966099493440705, 
+  "%_of_my_followers_who_follow_them": 0.050933786078098474, 
+  "profile_word_counts": [
+    [
+      "nature", 
+      7
+    ], 
+    [
+      "people", 
+      6
+    ], 
+    [
+      "garden", 
+      6
+    ], 
+    [
+      "social", 
+      5
+    ], 
+    [
+      "grow", 
+      4
+    ]
+  ], 
+  "id": 1101353329, 
+  "gender_breakdown": {
+    "M": 0.23333333333333334, 
+    "?": 0.6666666666666666, 
+    "F": 0.1
+  }
+}

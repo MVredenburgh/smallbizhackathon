@@ -1,0 +1,81 @@
+{
+  "screen_name": "GrowinCities", 
+  "raw_profile": {
+    "id": 317166439, 
+    "profile_sidebar_fill_color": "71C93E", 
+    "profile_text_color": "F5F0E9", 
+    "followers_count": 4304, 
+    "location": "Omaha, NE", 
+    "profile_background_color": "003304", 
+    "listed_count": 193, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "RT @m_rc8dez_7: @GrowinCities chomp, chomp, crunch!! Mmm, delicious", 
+      "created_at": "Thu Jul 02 14:30:48 +0000 2015", 
+      "retweeted": false, 
+      "user_mentions": [
+        {
+          "screen_name": "m_rc8dez_7", 
+          "name": "Yours trulyTOWNSLEY", 
+          "id": 204949773
+        }, 
+        {
+          "screen_name": "GrowinCities", 
+          "name": "Growing Cities", 
+          "id": 317166439
+        }
+      ], 
+      "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>", 
+      "id": 616615006302547968
+    }, 
+    "utc_offset": -18000, 
+    "statuses_count": 10082, 
+    "description": "A new film about urban farming in America. Host a screening in your community: http://t.co/gHnrnVIJH2", 
+    "friends_count": 2705, 
+    "profile_link_color": "8F5202", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/435805250432143360/FJb0dgPt_normal.jpeg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/317166439/1404944688", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/639844711/cw2yihwx89ra5tlc21ps.jpeg", 
+    "screen_name": "GrowinCities", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 614, 
+    "name": "Growing Cities", 
+    "url": "http://t.co/YBM8fkWLbL", 
+    "created_at": "Tue Jun 14 14:50:57 +0000 2011", 
+    "time_zone": "Central Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.008364312267657992, 
+  "%_of_my_followers_who_follow_them": 0.06112054329371817, 
+  "profile_word_counts": [
+    [
+      "food", 
+      11
+    ], 
+    [
+      "grow", 
+      7
+    ], 
+    [
+      "gardening", 
+      6
+    ], 
+    [
+      "nature", 
+      6
+    ], 
+    [
+      "people", 
+      5
+    ]
+  ], 
+  "id": 317166439, 
+  "gender_breakdown": {
+    "M": 0.1111111111111111, 
+    "?": 0.6111111111111112, 
+    "F": 0.2777777777777778
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "screen_name": "EarthwormTec", 
+  "raw_profile": {
+    "id": 1891052239, 
+    "profile_sidebar_fill_color": "F6F6F6", 
+    "profile_text_color": "333333", 
+    "followers_count": 5027, 
+    "location": "Stamford, CT", 
+    "profile_background_color": "ACDED6", 
+    "listed_count": 95, 
+    "status": {
+      "lang": "en", 
+      "favorited": false, 
+      "truncated": false, 
+      "text": "#Flowers &amp; #Plants looking a little drab right about now? #gardenchat\nFeed them #organic #EarthPods - NOW ON SALE!\n\nhttps://t.co/0UnU23d8U8", 
+      "created_at": "Sat Aug 01 13:04:26 +0000 2015", 
+      "hashtags": [
+        "Flowers", 
+        "Plants", 
+        "gardenchat", 
+        "organic", 
+        "EarthPods"
+      ], 
+      "retweeted": false, 
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
+      "urls": {
+        "https://t.co/0UnU23d8U8": "https://earthwormtechnologies.com/best-organic-plant-fertilizer"
+      }, 
+      "id": 627464907781447680
+    }, 
+    "utc_offset": -14400, 
+    "statuses_count": 3070, 
+    "description": "Tweets by the Founder: We create fun #organic #gardening products! Try our #BloomPucks garden seed starters & #EarthPods natural flower & plant food fertilizer!", 
+    "friends_count": 3842, 
+    "profile_link_color": "038543", 
+    "profile_image_url": "https://pbs.twimg.com/profile_images/623844384543518720/Av9R7WbJ_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1891052239/1437570986", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif", 
+    "screen_name": "EarthwormTec", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 572, 
+    "name": "EarthwormTec", 
+    "url": "https://t.co/1HKR0YaUB8", 
+    "created_at": "Sat Sep 21 18:24:10 +0000 2013", 
+    "time_zone": "Eastern Time (US & Canada)", 
+    "protected": false
+  }, 
+  "%_of_their_followers_who_follow_me": 0.007559180425701213, 
+  "%_of_my_followers_who_follow_them": 0.06451612903225806, 
+  "profile_word_counts": [
+    [
+      "garden", 
+      12
+    ], 
+    [
+      "gardening", 
+      9
+    ], 
+    [
+      "grow", 
+      7
+    ], 
+    [
+      "organic", 
+      6
+    ], 
+    [
+      "plants", 
+      5
+    ]
+  ], 
+  "id": 1891052239, 
+  "gender_breakdown": {
+    "M": 0.07894736842105263, 
+    "?": 0.5789473684210527, 
+    "F": 0.34210526315789475
+  }
+}
