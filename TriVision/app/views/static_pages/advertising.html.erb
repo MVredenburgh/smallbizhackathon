@@ -1,5 +1,4 @@
 <div class="center jumbotron">
-  <div class="row">
     <h2>Advertising Channels</h2>
     
     
@@ -10,34 +9,44 @@
     
     <% @communities.each do |profile| %>
     <div class="wrap">
-      <div class="col-md-12">
+
         <div class="row">
-          <div class="col-md-1">
-
-              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>"></img>
-
+          <div class="col-md-4">
+              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>" height="100" width="100"/></img>
+		  </div>    
+	      <div class="col-md-4">
               Name: <span><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
-
+	      </div>
+          <div class="col-md-4">
               Location: <span><%= profile['raw_profile']['location'] =%></span>
+	      </div>
+        </div>
 
+
+	    <div class="row">
+          <div class="col-md-4">    
               Description: <span><%= profile['raw_profile']['description'] =%></span>
-
+	 	  </div>
+          <div class="col-md-4">    
               Description: <span><%= profile['raw_profile']['description'] =%></span>
-
+	      </div>
+          <div class="col-md-4">    
               %_of_their_followers_who_follow_me: <span><%= (profile['%_of_their_followers_who_follow_me']*(1000.0)).round / 10.0 =%></span>
 
               %_of_my_followers_who_follow_them: <span><%= (profile['%_of_my_followers_who_follow_them']*(1000.0)).round / 10.0 =%></span>
+	      </div>
+	    </div>
 
-              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png"></img>
+	    <div class="row">
+          <div class="col-md-6"> 
+              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png" height="100" width="100"></img>
+		  </div>
+		  <div class="col-md-6">	  
+              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg" height="100" width="100"></img>
+		  </div>	
+		</div>  
+	</div>	  
 
-              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg"></img>
-
-              Gender pic: <img src="/assets/<%= profile['id'] =%>.gender.png"></img>
-          </div>
-        </div>  
-	    <h4>test</h4>
-      </div>  
-    </div>
     <% end %>
 
     
