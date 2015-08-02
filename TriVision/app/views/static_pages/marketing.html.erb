@@ -5,68 +5,110 @@
       <li role="presentation"><a href="/social_impact">Social Impact</a></li>
     </ul>
 
-    <div class="row">
-    <h2>Marketing Campaigns</h2>
+        
+    <h1>Marketing Campaigns</h1>
     <ul>
-        <li>Create marketing campaigns with specific themes</li>
-        <li>Use ad targeting to reach specific audiences</li>
+        <li class="header-li">Create marketing campaigns with specific themes</li>
+        <li class="header-li">Use ad targeting to reach specific audiences</li>
     </ul>
     
     
-    <h3>Marketing Campaign 1</h3>
-    <h4>Target everyone interested in:</h4>
-    <ul>
-        <% @master_json['marketing']['everyone']['interests'].each do |interest| %>
-        <li><%= interest =%></li>
-        <% end %>
-    </ul>
-    <h4>And try to mention:</h4>
-    <ul>
-        <% @master_json['marketing']['everyone']['themes'].each do |themes| %>
-        <li><%= themes =%></li>
-        <% end %>
-    </ul>
-
-    <h3>Marketing Campaign 2</h3>
-    <h4>Target women interested in:</h4>
-    <ul>
-        <% @master_json['marketing']['female']['interests'].each do |interest| %>
-        <li><%= interest =%></li>
-        <% end %>
-    </ul>
-    <h4>And try to mention:</h4>
-    <ul>
-        <% @master_json['marketing']['female']['themes'].each do |themes| %>
-        <li><%= themes =%></li>
-        <% end %>
-    </ul>
-
-    <h3>Marketing Campaign 3</h3>
-    <h4>Target men interested in:</h4>
-    <ul>
-        <% @master_json['marketing']['male']['interests'].each do |interest| %>
-        <li><%= interest =%></li>
-        <% end %>
-    </ul>
-    <h4>And try to mention:</h4>
-    <ul>
-        <% @master_json['marketing']['male']['themes'].each do |themes| %>
-        <li><%= themes =%></li>
-        <% end %>
-    </ul>
-
-    <h3>Target Geographic Regions</h3>
-    <ul>
-        <% @master_json['marketing']['geo'].each do |geo| %>
-        <li><%= geo =%></li>
-        <% end %>
-    </ul>
-    <img src="/assets/<%= @master_json['raw_profile']['id'] =%>.followermap.png"></img>
-
-
-    <h3>User Profile Keywords</h3>
-    <img src="/assets/<%= @master_json['raw_profile']['id'] =%>.wordcloud.png"></img>
+    <div class="wrap">
+        <div class="row">
+          <div class="col-md-12">
+              <span class="profile-name">Campaign 1</span>
+		  </div>    
+        </div>        
+	    <div class="row">
+          <div class="col-md-6 center"> 
+            <h4 class="campaign-header">Target everyone interested in</h4>
+            <ul>
+                <% @master_json['marketing']['everyone']['interests'].each do |interest| %>
+                <li class="campaign-item"><%= interest =%></li>
+                <% end %>
+            </ul>
+	      </div>
+          <div class="col-md-6 center">    
+            <h4 class="campaign-header">Try to mention</h4>
+            <ul>
+                <% @master_json['marketing']['everyone']['themes'].each do |themes| %>
+                <li class="campaign-item"><%= themes =%></li>
+                <% end %>
+            </ul>
+	      </div>
+	    </div>
+	</div>	  
 
     
-  </div>
+
+    <div class="wrap">
+        <div class="row">
+          <div class="col-md-12">
+              <span class="profile-name">Campaign 2</span>
+		  </div>    
+        </div>        
+	    <div class="row">
+          <div class="col-md-6 center"> 
+            <h4 class="campaign-header">Target WOMEN interested in</h4>
+            <ul>
+                <% @master_json['marketing']['female']['interests'].each do |interest| %>
+                <li class="campaign-item"><%= interest =%></li>
+                <% end %>
+            </ul>
+	      </div>
+          <div class="col-md-6 center">    
+            <h4 class="campaign-header">Try to mention</h4>
+            <ul>
+                <% @master_json['marketing']['female']['themes'].each do |themes| %>
+                <li class="campaign-item"><%= themes =%></li>
+                <% end %>
+            </ul>
+	      </div>
+	    </div>
+	</div>	  
+
+    
+    <div class="wrap">
+        <div class="row">
+          <div class="col-md-12">
+              <span class="profile-name">Campaign 3</span>
+		  </div>    
+        </div>        
+	    <div class="row">
+          <div class="col-md-6 center"> 
+            <h4 class="campaign-header">Target MEN interested in</h4>
+            <ul>
+                <% @master_json['marketing']['male']['interests'].each do |interest| %>
+                <li class="campaign-item"><%= interest =%></li>
+                <% end %>
+            </ul>
+	      </div>
+          <div class="col-md-6 center">    
+            <h4 class="campaign-header">Try to mention</h4>
+            <ul>
+                <% @master_json['marketing']['male']['themes'].each do |themes| %>
+                <li class="campaign-item"><%= themes =%></li>
+                <% end %>
+            </ul>
+	      </div>
+	    </div>
+	</div>	  
+    
+
+    <div class="wrap">
+        <h3>Target Geographic Regions</h3>
+        <ul>
+            <% @master_json['marketing']['geo'].each do |geo| %>
+            <li class="header-li"><%= geo =%></li>
+            <% end %>
+        </ul>
+        <img class="geo-pic" src="/assets/<%= @master_json['raw_profile']['id'] =%>.followermap.png"></img>
+    </div>
+
+    <div class="wrap">
+        <h3>User Profile Keywords</h3>
+        <img class="wc-pic" src="/assets/<%= @master_json['raw_profile']['id'] =%>.wordcloud.png"></img>
+    </div>
+
+    
 </div>
