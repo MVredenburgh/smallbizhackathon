@@ -1,46 +1,58 @@
-<div class="center jumbotron">
-  <div class="row">
+<div class="jumbotron">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/advertising">Advertising</a></li>
+      <li role="presentation"><a href="/marketing">Marketing</a></li>
+      <li role="presentation" class="active"><a href="/social_impact">Social Impact</a></li>
+    </ul>
     
-    <h3>Social Impact:</h3>
+    <h1>Social Impact</h1>
     <ul>
-        <li>These non-profits and social-impact groups are important in your network</li>
-        <li>Get involved or donate to these groups</li>
+        <li class="header-li">These non-profits and social-impact groups are important in your network</li>
+        <li class="header-li">Get involved or donate to these groups</li>
     </ul>
     
     <% @causes.each do |profile| %>
     <div class="wrap">
-      <div class="col-md-12">
+
         <div class="row">
-          <div class="col-md-1">
+          <div class="col-md-12">
+              <img src="<%= profile['raw_profile']['profile_image_url'] =%>"/></img>
+              <span class="profile-name"><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
+		  </div>    
+        </div>
 
-              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>"></img>
+        <div class="row">
+          <div class="col-md-12 profile-blob">
+              <span class="profile-location">(<%= profile['raw_profile']['location'] =%>)</span> <span class="profile-description"><%= profile['raw_profile']['description'] =%></span>
+		  </div>    
+        </div>
 
-              Name: <span><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
+	    <div class="row">
+          <div class="col-md-6 center"> 
+            <span class="big-pct"><%= (profile['%_of_their_followers_who_follow_me']*(1000.0)).round / 10.0 =%>%</span>
+            <br><span class="lil-pct">of <%= profile['raw_profile']['screen_name'] =%> followers follow me<span> 
+	      </div>
+          <div class="col-md-6 center">    
+            <span class="big-pct"><%= (profile['%_of_my_followers_who_follow_them']*(1000.0)).round / 10.0 =%>%</span>
+            <br><span class="lil-pct">of my followers follow <%= profile['raw_profile']['screen_name'] =%><span> 
+	      </div>
+	    </div>
 
-              Location: <span><%= profile['raw_profile']['location'] =%></span>
+	    <div class="row">
+          <div class="col-md-6 center"> 
+              <!--<span class="pic-title"><%= profile['raw_profile']['screen_name'] =%> are into:</span>-->
+              <img class="wordcloud-pic" src="/assets/<%= profile['id'] =%>.wordcloud.png" ></img>
+		  </div>
+		  <div class="col-md-6 center">	  
+              <!--<span class="pic-title"><%= profile['raw_profile']['screen_name'] =%> are:</span>-->
+              <img class="gender-pic" src="/assets/<%= profile['id'] =%>.gender.png"></img>
+		  </div>	
+		</div>  
+        <!--              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg" height="150" width="150"></img> -->
+	</div>	  
 
-              Description: <span><%= profile['raw_profile']['description'] =%></span>
-
-              Description: <span><%= profile['raw_profile']['description'] =%></span>
-
-              %_of_their_followers_who_follow_me: <span><%= (profile['%_of_their_followers_who_follow_me']*(1000.0)).round / 10.0 =%></span>
-
-              %_of_my_followers_who_follow_them: <span><%= (profile['%_of_my_followers_who_follow_them']*(1000.0)).round / 10.0 =%></span>
-
-              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png"></img>
-
-              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg"></img>
-
-              Gender pic: <img src="/assets/<%= profile['id'] =%>.gender.png"></img>
-          </div>
-        </div>  
-	    <h4>test</h4>
-      </div>  
-    </div>
     <% end %>
 
     
-      
-    <!-- <%= @master_json =%> -->
 
 </div>  

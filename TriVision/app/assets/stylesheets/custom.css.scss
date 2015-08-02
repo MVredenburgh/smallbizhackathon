@@ -42,14 +42,14 @@ h1 {
   font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+  //text-align: center;
 }
 
 h2 {
   font-size: 2.5em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
+  //margin-bottom: 30px;
+  //text-align: center;
   font-weight: normal;
   color: $gray-light;
 }
@@ -203,49 +203,6 @@ input {
   margin-left: 0;
 }
 
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
-/* microposts */
-
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
 
 aside {
   textarea {
@@ -268,7 +225,53 @@ img {
 }
 
 .wrap {
-padding: 35px;
-background-color: #FFFFFF;
-border: 1px solid #DDD;
-	}
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    margin-bottom: 20px
+}
+
+li.header-li {
+    text-align: left;
+    font-size: 18px;
+}
+
+p.subhead-p {
+    font-size: 18px;
+}
+
+.profile-name {
+  font-size: 32px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.profile-blob {
+  margin-top: 10px;
+}
+
+.profile-location {
+  font-size: 16px;
+  font-style: italic;  
+}
+
+.profile-description {
+  font-size: 16px;
+}
+
+.big-pct {
+  font-size: 60px;
+}
+
+.lil-pct {
+  font-size: 12px;
+}
+
+.wordcloud-pic {
+    width: 500px;
+}
+
+.gender-pic {
+    width: 300px;
+    padding-top: 70px;
+}
