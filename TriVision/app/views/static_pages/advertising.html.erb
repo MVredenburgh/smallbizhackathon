@@ -12,7 +12,7 @@
 
         <div class="row">
           <div class="col-md-4">
-              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>" height="100" width="100"/></img>
+              Profile pic: <img src="<%= profile['raw_profile']['profile_image_url'] =%>" height="35" width="35"/></img>
 		  </div>    
 	      <div class="col-md-4">
               Name: <span><%= profile['raw_profile']['name'] =%> (@<%= profile['raw_profile']['screen_name'] =%>)</span>
@@ -39,10 +39,10 @@
 
 	    <div class="row">
           <div class="col-md-6"> 
-              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png" height="100" width="100"></img>
+              Wordcloud pic: <img src="/assets/<%= profile['id'] =%>.wordcloud.png" height="150" width="150"></img>
 		  </div>
 		  <div class="col-md-6">	  
-              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg" height="100" width="100"></img>
+              User profiles pic: <img src="/assets/<%= profile['id'] =%>.profiles.jpg" height="150" width="150"></img>
 		  </div>	
 		</div>  
 	</div>	  
